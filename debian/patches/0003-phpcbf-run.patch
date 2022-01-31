@@ -1,0 +1,46 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <taffit@debian.org>
+Date: Mon, 11 Mar 2019 21:29:32 -1000
+Subject: phpcbf run
+
+Forwarded: no
+---
+ tests/Functional/Net/SCPSSH2UserStoryTest.php | 6 +++---
+ tests/Functional/Net/SFTPUserStoryTest.php    | 8 ++++----
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/tests/Functional/Net/SCPSSH2UserStoryTest.php b/tests/Functional/Net/SCPSSH2UserStoryTest.php
+index 41e86e9..8040724 100644
+--- a/tests/Functional/Net/SCPSSH2UserStoryTest.php
++++ b/tests/Functional/Net/SCPSSH2UserStoryTest.php
+@@ -11,9 +11,9 @@ use phpseclib\Net\SSH2;
+ 
+ class Functional_Net_SCPSSH2UserStoryTest extends PhpseclibFunctionalTestCase
+ {
+-    static protected $remoteFile;
+-    static protected $exampleData;
+-    static protected $exampleDataLength;
++    protected static $remoteFile;
++    protected static $exampleData;
++    protected static $exampleDataLength;
+ 
+     public static function setUpBeforeClass()
+     {
+diff --git a/tests/Functional/Net/SFTPUserStoryTest.php b/tests/Functional/Net/SFTPUserStoryTest.php
+index 17497f6..80bf690 100644
+--- a/tests/Functional/Net/SFTPUserStoryTest.php
++++ b/tests/Functional/Net/SFTPUserStoryTest.php
+@@ -10,10 +10,10 @@ use phpseclib\Net\SFTP;
+ 
+ class Functional_Net_SFTPUserStoryTest extends PhpseclibFunctionalTestCase
+ {
+-    static protected $scratchDir;
+-    static protected $exampleData;
+-    static protected $exampleDataLength;
+-    static protected $buffer;
++    protected static $scratchDir;
++    protected static $exampleData;
++    protected static $exampleDataLength;
++    protected static $buffer;
+ 
+     public static function setUpBeforeClass()
+     {

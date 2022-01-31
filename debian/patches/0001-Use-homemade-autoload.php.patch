@@ -1,0 +1,259 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Sat, 26 Sep 2015 17:04:25 -0400
+Subject: Use homemade autoload.php
+
+Forwarded: not-needed
+---
+ phpseclib/Crypt/AES.php        | 2 +-
+ phpseclib/Crypt/Blowfish.php   | 2 +-
+ phpseclib/Crypt/DES.php        | 2 +-
+ phpseclib/Crypt/Hash.php       | 2 +-
+ phpseclib/Crypt/RC2.php        | 2 +-
+ phpseclib/Crypt/RC4.php        | 2 +-
+ phpseclib/Crypt/RSA.php        | 4 ++--
+ phpseclib/Crypt/Random.php     | 2 +-
+ phpseclib/Crypt/Rijndael.php   | 2 +-
+ phpseclib/Crypt/TripleDES.php  | 2 +-
+ phpseclib/Crypt/Twofish.php    | 2 +-
+ phpseclib/Net/SCP.php          | 2 +-
+ phpseclib/Net/SFTP.php         | 2 +-
+ phpseclib/Net/SSH1.php         | 4 ++--
+ phpseclib/Net/SSH2.php         | 4 ++--
+ phpseclib/System/SSH/Agent.php | 2 +-
+ 16 files changed, 19 insertions(+), 19 deletions(-)
+
+diff --git a/phpseclib/Crypt/AES.php b/phpseclib/Crypt/AES.php
+index 7d8cb8b..013c141 100644
+--- a/phpseclib/Crypt/AES.php
++++ b/phpseclib/Crypt/AES.php
+@@ -23,7 +23,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $aes = new \phpseclib\Crypt\AES();
+  *
+diff --git a/phpseclib/Crypt/Blowfish.php b/phpseclib/Crypt/Blowfish.php
+index 74cc49d..6ab527c 100644
+--- a/phpseclib/Crypt/Blowfish.php
++++ b/phpseclib/Crypt/Blowfish.php
+@@ -14,7 +14,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $blowfish = new \phpseclib\Crypt\Blowfish();
+  *
+diff --git a/phpseclib/Crypt/DES.php b/phpseclib/Crypt/DES.php
+index 9a8225f..bf4c498 100644
+--- a/phpseclib/Crypt/DES.php
++++ b/phpseclib/Crypt/DES.php
+@@ -16,7 +16,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $des = new \phpseclib\Crypt\DES();
+  *
+diff --git a/phpseclib/Crypt/Hash.php b/phpseclib/Crypt/Hash.php
+index 248b65e..8a965e3 100644
+--- a/phpseclib/Crypt/Hash.php
++++ b/phpseclib/Crypt/Hash.php
+@@ -18,7 +18,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $hash = new \phpseclib\Crypt\Hash('sha1');
+  *
+diff --git a/phpseclib/Crypt/RC2.php b/phpseclib/Crypt/RC2.php
+index b2b9d48..10dcdc1 100644
+--- a/phpseclib/Crypt/RC2.php
++++ b/phpseclib/Crypt/RC2.php
+@@ -14,7 +14,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $rc2 = new \phpseclib\Crypt\RC2();
+  *
+diff --git a/phpseclib/Crypt/RC4.php b/phpseclib/Crypt/RC4.php
+index 25e4ff8..9784bf6 100644
+--- a/phpseclib/Crypt/RC4.php
++++ b/phpseclib/Crypt/RC4.php
+@@ -18,7 +18,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $rc4 = new \phpseclib\Crypt\RC4();
+  *
+diff --git a/phpseclib/Crypt/RSA.php b/phpseclib/Crypt/RSA.php
+index 59999d7..1330b17 100644
+--- a/phpseclib/Crypt/RSA.php
++++ b/phpseclib/Crypt/RSA.php
+@@ -8,7 +8,7 @@
+  * Here's an example of how to encrypt and decrypt text with this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $rsa = new \phpseclib\Crypt\RSA();
+  *    extract($rsa->createKey());
+@@ -26,7 +26,7 @@
+  * Here's an example of how to create signatures and verify signatures with this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $rsa = new \phpseclib\Crypt\RSA();
+  *    extract($rsa->createKey());
+diff --git a/phpseclib/Crypt/Random.php b/phpseclib/Crypt/Random.php
+index 8f53eb3..5434f2a 100644
+--- a/phpseclib/Crypt/Random.php
++++ b/phpseclib/Crypt/Random.php
+@@ -8,7 +8,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    echo bin2hex(\phpseclib\Crypt\Random::string(8));
+  * ?>
+diff --git a/phpseclib/Crypt/Rijndael.php b/phpseclib/Crypt/Rijndael.php
+index 3648a19..943d3f6 100644
+--- a/phpseclib/Crypt/Rijndael.php
++++ b/phpseclib/Crypt/Rijndael.php
+@@ -28,7 +28,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $rijndael = new \phpseclib\Crypt\Rijndael();
+  *
+diff --git a/phpseclib/Crypt/TripleDES.php b/phpseclib/Crypt/TripleDES.php
+index a2c4166..d6818f6 100644
+--- a/phpseclib/Crypt/TripleDES.php
++++ b/phpseclib/Crypt/TripleDES.php
+@@ -10,7 +10,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $des = new \phpseclib\Crypt\TripleDES();
+  *
+diff --git a/phpseclib/Crypt/Twofish.php b/phpseclib/Crypt/Twofish.php
+index 70980a2..d2a9bec 100644
+--- a/phpseclib/Crypt/Twofish.php
++++ b/phpseclib/Crypt/Twofish.php
+@@ -14,7 +14,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $twofish = new \phpseclib\Crypt\Twofish();
+  *
+diff --git a/phpseclib/Net/SCP.php b/phpseclib/Net/SCP.php
+index cf13496..7ee9c8d 100644
+--- a/phpseclib/Net/SCP.php
++++ b/phpseclib/Net/SCP.php
+@@ -10,7 +10,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $ssh = new \phpseclib\Net\SSH2('www.domain.tld');
+  *    if (!$ssh->login('username', 'password')) {
+diff --git a/phpseclib/Net/SFTP.php b/phpseclib/Net/SFTP.php
+index 0c06c35..96eb83c 100644
+--- a/phpseclib/Net/SFTP.php
++++ b/phpseclib/Net/SFTP.php
+@@ -12,7 +12,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $sftp = new \phpseclib\Net\SFTP('www.domain.tld');
+  *    if (!$sftp->login('username', 'password')) {
+diff --git a/phpseclib/Net/SSH1.php b/phpseclib/Net/SSH1.php
+index e372b8b..428ab61 100644
+--- a/phpseclib/Net/SSH1.php
++++ b/phpseclib/Net/SSH1.php
+@@ -8,7 +8,7 @@
+  * Here's a short example of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $ssh = new \phpseclib\Net\SSH1('www.domain.tld');
+  *    if (!$ssh->login('username', 'password')) {
+@@ -22,7 +22,7 @@
+  * Here's another short example:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $ssh = new \phpseclib\Net\SSH1('www.domain.tld');
+  *    if (!$ssh->login('username', 'password')) {
+diff --git a/phpseclib/Net/SSH2.php b/phpseclib/Net/SSH2.php
+index 7ec4a1e..c05895e 100644
+--- a/phpseclib/Net/SSH2.php
++++ b/phpseclib/Net/SSH2.php
+@@ -8,7 +8,7 @@
+  * Here are some examples of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $ssh = new \phpseclib\Net\SSH2('www.domain.tld');
+  *    if (!$ssh->login('username', 'password')) {
+@@ -22,7 +22,7 @@
+  *
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $key = new \phpseclib\Crypt\RSA();
+  *    //$key->setPassword('whatever');
+diff --git a/phpseclib/System/SSH/Agent.php b/phpseclib/System/SSH/Agent.php
+index 2b25250..2d7ce6b 100644
+--- a/phpseclib/System/SSH/Agent.php
++++ b/phpseclib/System/SSH/Agent.php
+@@ -8,7 +8,7 @@
+  * Here are some examples of how to use this library:
+  * <code>
+  * <?php
+- *    include 'vendor/autoload.php';
++ *    include 'phpseclib/autoload.php';
+  *
+  *    $agent = new \phpseclib\System\SSH\Agent();
+  *

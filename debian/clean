@@ -1,0 +1,5 @@
+.phpunit.result.cache
+debian/autoload.php.tpl
+debian/autoload.tests.php.tpl
+phpseclib/autoload.php
+vendor/

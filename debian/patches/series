@@ -1,0 +1,5 @@
+0001-Use-homemade-autoload.php.patch
+0003-phpcbf-run.patch
+0004-Drop-test-failing-on-pbuilder.patch
+0005-Compatibility-with-recent-PHPUnit-8.patch
+0005-Adapt-to-recent-version-of-PHPUnit-9.patch

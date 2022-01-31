@@ -1,0 +1,21 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <taffit@debian.org>
+Date: Sat, 12 Dec 2020 15:32:34 -0400
+Subject: Adapt to recent version of PHPUnit (9)
+
+---
+ tests/Unit/Net/SSH2UnitTest.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/Unit/Net/SSH2UnitTest.php b/tests/Unit/Net/SSH2UnitTest.php
+index aefcc54..0303809 100644
+--- a/tests/Unit/Net/SSH2UnitTest.php
++++ b/tests/Unit/Net/SSH2UnitTest.php
+@@ -42,7 +42,7 @@ class Unit_Net_SSH2UnitTest extends PhpseclibTestCase
+         $this->assertStringStartsWith('SSH-2.0-phpseclib_2.0', $identifier);
+ 
+         if (function_exists('\\Sodium\\library_version_major')) {
+-            $this->assertContains('libsodium', $identifier);
++            $this->assertStringContainsString('libsodium', $identifier);
+         }
+ 
+         if (extension_loaded('openssl')) {
